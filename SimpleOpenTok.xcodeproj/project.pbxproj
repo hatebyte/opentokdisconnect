@@ -15,6 +15,7 @@
 		6DDFD3F61BBB4AD200FCD78D /* SimpleOpenTokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDFD3F51BBB4AD200FCD78D /* SimpleOpenTokTests.swift */; };
 		6DDFD4011BBB4AD200FCD78D /* SimpleOpenTokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDFD4001BBB4AD200FCD78D /* SimpleOpenTokUITests.swift */; };
 		6DDFD4111BBB4B6000FCD78D /* CMOpenTokManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDFD4101BBB4B6000FCD78D /* CMOpenTokManager.m */; settings = {ASSET_TAGS = (); }; };
+		6DE570631BBCA29A0082360C /* MyOTGLKVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE570621BBCA29A0082360C /* MyOTGLKVideoView.m */; settings = {ASSET_TAGS = (); }; };
 		AE17835C1425A5B54555BA6F /* libPods-SimpleOpenTok.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B613890B09D6B04D0D09D12 /* libPods-SimpleOpenTok.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		6DDFD40E1BBB4B6000FCD78D /* SimpleOpenTok-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleOpenTok-Bridging-Header.h"; sourceTree = "<group>"; };
 		6DDFD40F1BBB4B6000FCD78D /* CMOpenTokManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMOpenTokManager.h; sourceTree = "<group>"; };
 		6DDFD4101BBB4B6000FCD78D /* CMOpenTokManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMOpenTokManager.m; sourceTree = "<group>"; };
+		6DE570611BBCA29A0082360C /* MyOTGLKVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOTGLKVideoView.h; sourceTree = "<group>"; };
+		6DE570621BBCA29A0082360C /* MyOTGLKVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOTGLKVideoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 		6DDFD3DF1BBB4AD100FCD78D /* SimpleOpenTok */ = {
 			isa = PBXGroup;
 			children = (
+				6DE570611BBCA29A0082360C /* MyOTGLKVideoView.h */,
+				6DE570621BBCA29A0082360C /* MyOTGLKVideoView.m */,
 				6DDFD40F1BBB4B6000FCD78D /* CMOpenTokManager.h */,
 				6DDFD4101BBB4B6000FCD78D /* CMOpenTokManager.m */,
 				6DDFD3E01BBB4AD100FCD78D /* AppDelegate.swift */,
@@ -324,6 +329,7 @@
 			files = (
 				6DDFD3E31BBB4AD100FCD78D /* ViewController.swift in Sources */,
 				6DDFD3E11BBB4AD100FCD78D /* AppDelegate.swift in Sources */,
+				6DE570631BBCA29A0082360C /* MyOTGLKVideoView.m in Sources */,
 				6DDFD4111BBB4B6000FCD78D /* CMOpenTokManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

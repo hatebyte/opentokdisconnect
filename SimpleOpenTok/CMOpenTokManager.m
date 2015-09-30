@@ -7,6 +7,7 @@
 //
 
 #import "CMOpenTokManager.h"
+#import "MyOTGLKVideoView.h"
 
 static NSString* const kApiKey              = @"44930302";
 @interface CMOpenTokManager ()
@@ -116,13 +117,23 @@ static NSString* const kApiKey              = @"44930302";
 }
 
 - (OTPublisher *)getPublisher {
-    return [[OTPublisher alloc] initWithDelegate:self name:[[UIDevice currentDevice] name]];
+    OTPublisher *p = [[OTPublisher alloc] initWithDelegate:self
+                                     name:[[UIDevice currentDevice] name]];
+    MyOTGLKVideoView *view = [[MyOTGLKVideoView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
+    [_publisher setValue:view forKey:@"_videoView"];
+    [_publisher setVideoRender:(id)view];
+    return p;
+//    return [[OTPublisher alloc] initWithDelegate:self name:[[UIDevice currentDevice] name]];
 }
 
 - (OTSubscriber *)getSubscriberWithStream:(OTStream *)stream {
-    return [[OTSubscriber alloc] initWithStream:stream delegate:self];
+    OTSubscriber *x = [[OTSubscriber alloc] initWithStream:stream delegate:self];
+    MyOTGLKVideoView *view = [[MyOTGLKVideoView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
+    [_subscriber setValue:view forKey:@"_videoView"];
+    [_subscriber setVideoRender:(id)view];
+    return x;
+//    return [[OTSubscriber alloc] initWithStream:stream delegate:self];
 }
-
 
 
 
@@ -159,6 +170,7 @@ static NSString* const kApiKey              = @"44930302";
 - (void)session:(OTSession*)session streamCreated:(OTStream *)stream {
     self.subscriber                                 = [self getSubscriberWithStream:stream];
     self.subscriber.subscribeToVideo                = NO;
+    
     [self addSubscriber];
 }
 
