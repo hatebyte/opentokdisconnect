@@ -107,7 +107,6 @@ static NSString* const kApiKey              = @"44930302";
 //    self.publisher.delegate                 = nil;
 //    self.session                            = nil;
 //    self.publisher                          = nil;
-    
 }
 
 
