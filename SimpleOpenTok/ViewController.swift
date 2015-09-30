@@ -66,22 +66,22 @@ class ViewController: UIViewController,CMOpenTokManagerDelegate {
     // MARK: CMOpenTokManager
     func openTokHasConnected() {
         setUpForConnected()
-        self.connectionStatusLabel?.text = "Sweet connected!"
+        self.connectionStatusLabel?.text                                    = "Sweet connected!"
     }
     
     func openTokDisconnectedWithError(error:NSError) {
-        setUpForConnecting()
+        setUpForDisconnected()
         if let _ = self.chatEngine {
             self.chatEngine                                                 = nil
         }
-        self.connectionStatusLabel?.text = "Now disconnected with errror"
+        self.connectionStatusLabel?.text                                    = "Now disconnected with errror"
 
         print("error : \(error)");
     }
     
     func openTokDidDisconnect() {
-        setUpForConnecting()
-        self.connectionStatusLabel?.text = "Now disconnected"
+        setUpForDisconnected()
+        self.connectionStatusLabel?.text                                    = "Now disconnected"
         if let _ = self.chatEngine {
             self.chatEngine                                                 = nil
         }
